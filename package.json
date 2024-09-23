@@ -1,0 +1,41 @@
+{
+  "name": "test-project-1",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/ibkadeeko/test-project-1.git",
+  "author": "Ibukunoluwa Adeeko <ibukunadeeko@gmail.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.11.1",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.9.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.2"
+  },
+  "scripts": {
+    "prepare": "node .husky/install.mjs",
+    "test": "echo \"No test specified: Skipping...\" && exit 0"
+  },
+  "lint-staged": {
+    "*.{js,ts,md}": [
+      "prettier --write"
+    ],
+    "*.{js,ts}": [
+      "eslint --max-warnings=0 --no-warn-ignored --fix"
+    ]
+  },
+  "engines": {
+    "node": ">=18.20.0",
+    "npm": ">=10.7.0"
+  }
+}
